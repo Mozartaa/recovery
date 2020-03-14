@@ -1,0 +1,55 @@
+logging:
+  level:
+    root: info
+  file:
+    path: /root/java/bigdata/logs/
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 10MB
+  redis:
+    host: 39.107.126.145
+    port: 6379
+    password: 123456
+      #客户端超时时间单位是毫秒 默认是2000
+    #最大空闲数
+    maxIdle: 20
+    #连接池的最大数据库连接数
+    maxActive: -1
+    #控制一个pool可分配多少个jedis实例,用来替换上面的maxActive
+    maxTotal: 100
+    #最大建立连接等待时间。如果超过此时间将接到异常
+    maxWaitMillis: 100
+    #连接的最小空闲时间
+    minEvictableIdleTimeMillis: 864000000
+    #每次释放连接的最大数目
+    numTestsPerEvictionRun: 10
+    #逐出扫描的时间间隔(毫秒) 如果为负数,则不运行逐出线程
+    timeBetweenEvictionRunsMillis: 300000
+    #是否在从池中取出连接前进行检验,如果检验失败,则从池中去除连接并尝试取出另一个
+    testOnBorrow: true
+    #在空闲时检查有效性
+    testWhileIdle: false
+    #数据库
+    database: 0
+server:
+  port: 8089
+  ssl:
+    key-store: 2097665_www.mozarta.cn.pfx
+    key-store-password: 575K3Aet
+
+
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:             #缩略图生成参数
+    width: 200
+    height: 200
+  tracker-list:            #TrackerList参数,支持多个
+  - 39.107.126.145:22122
