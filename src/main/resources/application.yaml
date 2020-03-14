@@ -16,7 +16,6 @@ spring:
   redis:
     host: 39.107.126.145
     port: 6379
-    password: 123456
       #客户端超时时间单位是毫秒 默认是2000
     #最大空闲数
     maxIdle: 20
@@ -39,11 +38,7 @@ spring:
     #数据库
     database: 0
 server:
-  port: 8089
-  ssl:
-    key-store: 2097665_www.mozarta.cn.pfx
-    key-store-password: 575K3Aet
-
+  port: 
 
 fdfs:
   so-timeout: 1501
@@ -52,4 +47,4 @@ fdfs:
     width: 200
     height: 200
   tracker-list:            #TrackerList参数,支持多个
-  - 39.107.126.145:22122
+  - 
